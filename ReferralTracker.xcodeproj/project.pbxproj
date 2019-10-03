@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7910EBAF22E8C038000A6B78 /* ReferralWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910EBAE22E8C038000A6B78 /* ReferralWindowController.swift */; };
+		793B8AB322E7706D005BBD6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB222E7706D005BBD6A /* ViewController.swift */; };
+		793B8AB822E776AF005BBD6A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB522E776AE005BBD6A /* Buttons.swift */; };
+		793B8AB922E776AF005BBD6A /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB622E776AE005BBD6A /* GeneralExtensions.swift */; };
+		793B8ABA22E776AF005BBD6A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB722E776AE005BBD6A /* StringExtensions.swift */; };
 		795F6CE022CBCDC00098E321 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795F6CDF22CBCDC00098E321 /* AppDelegate.swift */; };
 		795F6CE222CBCDC00098E321 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795F6CE122CBCDC00098E321 /* Document.swift */; };
 		795F6CE422CBCDC10098E321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795F6CE322CBCDC10098E321 /* Assets.xcassets */; };
 		795F6CE722CBCDC10098E321 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795F6CE522CBCDC10098E321 /* Main.storyboard */; };
+		795F6CF022CBCE2E0098E321 /* ReferralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795F6CEF22CBCE2E0098E321 /* ReferralModel.swift */; };
+		799D3610233A72A800662528 /* LetterheadPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799D360E233A72A800662528 /* LetterheadPrinting.swift */; };
+		799D3611233A72A800662528 /* WPCM Letterhead Blank Cropped.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 799D360F233A72A800662528 /* WPCM Letterhead Blank Cropped.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7910EBAE22E8C038000A6B78 /* ReferralWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralWindowController.swift; sourceTree = "<group>"; };
+		793B8AB222E7706D005BBD6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		793B8AB522E776AE005BBD6A /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		793B8AB622E776AE005BBD6A /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
+		793B8AB722E776AE005BBD6A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		795F6CDC22CBCDC00098E321 /* ReferralTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReferralTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		795F6CDF22CBCDC00098E321 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		795F6CE122CBCDC00098E321 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -21,6 +34,9 @@
 		795F6CE622CBCDC10098E321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		795F6CE822CBCDC10098E321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795F6CE922CBCDC10098E321 /* ReferralTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReferralTracker.entitlements; sourceTree = "<group>"; };
+		795F6CEF22CBCE2E0098E321 /* ReferralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralModel.swift; sourceTree = "<group>"; };
+		799D360E233A72A800662528 /* LetterheadPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterheadPrinting.swift; sourceTree = "<group>"; };
+		799D360F233A72A800662528 /* WPCM Letterhead Blank Cropped.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WPCM Letterhead Blank Cropped.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +50,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793B8AB422E776AE005BBD6A /* Extensions Etc */ = {
+			isa = PBXGroup;
+			children = (
+				793B8AB522E776AE005BBD6A /* Buttons.swift */,
+				793B8AB622E776AE005BBD6A /* GeneralExtensions.swift */,
+				793B8AB722E776AE005BBD6A /* StringExtensions.swift */,
+			);
+			path = "Extensions Etc";
+			sourceTree = "<group>";
+		};
 		795F6CD322CBCDC00098E321 = {
 			isa = PBXGroup;
 			children = (
@@ -53,14 +79,28 @@
 		795F6CDE22CBCDC00098E321 /* ReferralTracker */ = {
 			isa = PBXGroup;
 			children = (
-				795F6CDF22CBCDC00098E321 /* AppDelegate.swift */,
-				795F6CE122CBCDC00098E321 /* Document.swift */,
-				795F6CE322CBCDC10098E321 /* Assets.xcassets */,
 				795F6CE522CBCDC10098E321 /* Main.storyboard */,
+				795F6CDF22CBCDC00098E321 /* AppDelegate.swift */,
+				7910EBAE22E8C038000A6B78 /* ReferralWindowController.swift */,
+				793B8AB222E7706D005BBD6A /* ViewController.swift */,
+				795F6CE122CBCDC00098E321 /* Document.swift */,
+				795F6CEF22CBCE2E0098E321 /* ReferralModel.swift */,
+				795F6CE322CBCDC10098E321 /* Assets.xcassets */,
 				795F6CE822CBCDC10098E321 /* Info.plist */,
 				795F6CE922CBCDC10098E321 /* ReferralTracker.entitlements */,
+				799D360D233A72A800662528 /* Printing To Letterhead */,
+				793B8AB422E776AE005BBD6A /* Extensions Etc */,
 			);
 			path = ReferralTracker;
+			sourceTree = "<group>";
+		};
+		799D360D233A72A800662528 /* Printing To Letterhead */ = {
+			isa = PBXGroup;
+			children = (
+				799D360E233A72A800662528 /* LetterheadPrinting.swift */,
+				799D360F233A72A800662528 /* WPCM Letterhead Blank Cropped.pdf */,
+			);
+			path = "Printing To Letterhead";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799D3611233A72A800662528 /* WPCM Letterhead Blank Cropped.pdf in Resources */,
 				795F6CE422CBCDC10098E321 /* Assets.xcassets in Resources */,
 				795F6CE722CBCDC10098E321 /* Main.storyboard in Resources */,
 			);
@@ -133,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7910EBAF22E8C038000A6B78 /* ReferralWindowController.swift in Sources */,
+				793B8AB822E776AF005BBD6A /* Buttons.swift in Sources */,
+				799D3610233A72A800662528 /* LetterheadPrinting.swift in Sources */,
 				795F6CE222CBCDC00098E321 /* Document.swift in Sources */,
 				795F6CE022CBCDC00098E321 /* AppDelegate.swift in Sources */,
+				793B8ABA22E776AF005BBD6A /* StringExtensions.swift in Sources */,
+				793B8AB322E7706D005BBD6A /* ViewController.swift in Sources */,
+				793B8AB922E776AF005BBD6A /* GeneralExtensions.swift in Sources */,
+				795F6CF022CBCE2E0098E321 /* ReferralModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -256,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -272,13 +320,15 @@
 				CODE_SIGN_ENTITLEMENTS = ReferralTracker/ReferralTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = ReferralTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = .1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.ReferralTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -292,13 +342,15 @@
 				CODE_SIGN_ENTITLEMENTS = ReferralTracker/ReferralTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = ReferralTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = .1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.ReferralTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
