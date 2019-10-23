@@ -8,7 +8,17 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate, NSControlTextEditingDelegate, NSWindowDelegate {
+protocol SpecialistDelegate:class {
+    var chosenSpecialist: Specialist? { get set }
+    func addSpecialist() -> Void
+}
+
+protocol InsuranceDelegate:class {
+    var chosenInsurance: Insurance? { get set }
+    func addInsurance() -> Void
+}
+
+class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate, NSControlTextEditingDelegate, NSWindowDelegate, SpecialistDelegate, InsuranceDelegate {
     
     @IBOutlet weak var ptName: NSTextField!
     @IBOutlet weak var dob: NSTextField!
@@ -41,6 +51,9 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
     @IBOutlet weak var declinedYesCheckbox: NSButton!
     @IBOutlet weak var notified: NSComboBox!
     @IBOutlet weak var notesScroll: NSScrollView!
+    
+    var chosenSpecialist:Specialist?
+    var chosenInsurance:Insurance?
     
     var notes:NSTextView {
         get {
@@ -79,6 +92,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         //I have to cast it as a textfield so I can make the
         //view controller a textfield delegate for it
         (notified as NSTextField).delegate = self
+    
         
 //        activityRadCheckbox.action = #selector(self.uniqueSelections)
 //        activityRefCheckbox.action = #selector(self.uniqueSelections)
@@ -244,6 +258,24 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         }
     }
     
+    func addSpecialist() {
+        guard let theSpecialist = chosenSpecialist else { return }
+        specName.stringValue = theSpecialist.specName
+        specAddress.stringValue = theSpecialist.specAddress
+        specPhone.stringValue = theSpecialist.specPhone
+        specFax.stringValue = theSpecialist.specFax
+        specialty.stringValue = theSpecialist.specialty
+        npi.stringValue = theSpecialist.npi
+        contact.stringValue = theSpecialist.contact
+    }
+    
+    func addInsurance() {
+        guard let theInsurance = chosenInsurance else { return }
+        paInsurance.stringValue = theInsurance.insName
+        paInsPhone.stringValue = theInsurance.insPhone
+        paInsFax.stringValue = theInsurance.insFax
+    }
+    
     @IBAction func printReferral(_ sender: NSButton) {
         let theText = """
         
@@ -286,6 +318,22 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         printBlankPageWithText(theText, fontSize: 14.0, window: self.view.window!)
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showSpecialists":
+            if let toViewController = segue.destinationController as? SpecialistVC {
+                toViewController.currentSpecialistDelegate = self
+                toViewController.chosenSpecialist = chosenSpecialist
+            }
+        case "showInsurances":
+            if let toViewController = segue.destinationController as? InsuranceVC {
+                toViewController.currentInsuranceDelegate = self
+                toViewController.chosenInsurance = chosenInsurance
+            }
+        default: return
+        }
+    }
+    
     func windowShouldClose(_ sender: NSWindow) -> Bool {
         let textFields = getTextFieldsInView(self.view)
         for field in textFields {
@@ -293,4 +341,5 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         }
         return true
     }
+    
 }

@@ -563,3 +563,17 @@ extension Date {
         return formatter.string(from: self)
     }
 }
+
+//MARK: Decodable Extensions
+extension Decodable {
+static func parse(jsonFile: URL) -> Self? {
+  //guard let url = Bundle.main.url(forResource: jsonFile, withExtension: "json"),
+       guard let data = try? Data(contentsOf: jsonFile),
+        let output = try? JSONDecoder().decode(self, from: data)
+      else {
+    return nil
+  }
+
+  return output
+}
+}

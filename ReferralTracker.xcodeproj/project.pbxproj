@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7910EBAF22E8C038000A6B78 /* ReferralWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7910EBAE22E8C038000A6B78 /* ReferralWindowController.swift */; };
+		79286A6623609ABF00D39DD3 /* SpecialistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79286A6523609ABF00D39DD3 /* SpecialistVC.swift */; };
+		79286A6E23609B4800D39DD3 /* SpecialistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79286A6D23609B4800D39DD3 /* SpecialistModel.swift */; };
+		79286A702360A9E300D39DD3 /* InsuranceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79286A6F2360A9E300D39DD3 /* InsuranceVC.swift */; };
+		79286A722360A9F800D39DD3 /* InsuranceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79286A712360A9F800D39DD3 /* InsuranceModel.swift */; };
 		793B8AB322E7706D005BBD6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB222E7706D005BBD6A /* ViewController.swift */; };
 		793B8AB822E776AF005BBD6A /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB522E776AE005BBD6A /* Buttons.swift */; };
 		793B8AB922E776AF005BBD6A /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793B8AB622E776AE005BBD6A /* GeneralExtensions.swift */; };
@@ -23,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		7910EBAE22E8C038000A6B78 /* ReferralWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralWindowController.swift; sourceTree = "<group>"; };
+		79286A6523609ABF00D39DD3 /* SpecialistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistVC.swift; sourceTree = "<group>"; };
+		79286A6D23609B4800D39DD3 /* SpecialistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialistModel.swift; sourceTree = "<group>"; };
+		79286A6F2360A9E300D39DD3 /* InsuranceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceVC.swift; sourceTree = "<group>"; };
+		79286A712360A9F800D39DD3 /* InsuranceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceModel.swift; sourceTree = "<group>"; };
 		793B8AB222E7706D005BBD6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		793B8AB522E776AE005BBD6A /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		793B8AB622E776AE005BBD6A /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 				793B8AB222E7706D005BBD6A /* ViewController.swift */,
 				795F6CE122CBCDC00098E321 /* Document.swift */,
 				795F6CEF22CBCE2E0098E321 /* ReferralModel.swift */,
+				79286A6523609ABF00D39DD3 /* SpecialistVC.swift */,
+				79286A6D23609B4800D39DD3 /* SpecialistModel.swift */,
+				79286A6F2360A9E300D39DD3 /* InsuranceVC.swift */,
+				79286A712360A9F800D39DD3 /* InsuranceModel.swift */,
 				795F6CE322CBCDC10098E321 /* Assets.xcassets */,
 				795F6CE822CBCDC10098E321 /* Info.plist */,
 				795F6CE922CBCDC10098E321 /* ReferralTracker.entitlements */,
@@ -175,12 +187,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7910EBAF22E8C038000A6B78 /* ReferralWindowController.swift in Sources */,
+				79286A702360A9E300D39DD3 /* InsuranceVC.swift in Sources */,
 				793B8AB822E776AF005BBD6A /* Buttons.swift in Sources */,
 				799D3610233A72A800662528 /* LetterheadPrinting.swift in Sources */,
+				79286A722360A9F800D39DD3 /* InsuranceModel.swift in Sources */,
 				795F6CE222CBCDC00098E321 /* Document.swift in Sources */,
 				795F6CE022CBCDC00098E321 /* AppDelegate.swift in Sources */,
 				793B8ABA22E776AF005BBD6A /* StringExtensions.swift in Sources */,
+				79286A6E23609B4800D39DD3 /* SpecialistModel.swift in Sources */,
 				793B8AB322E7706D005BBD6A /* ViewController.swift in Sources */,
+				79286A6623609ABF00D39DD3 /* SpecialistVC.swift in Sources */,
 				793B8AB922E776AF005BBD6A /* GeneralExtensions.swift in Sources */,
 				795F6CF022CBCE2E0098E321 /* ReferralModel.swift in Sources */,
 			);
