@@ -58,10 +58,8 @@ class InsuranceVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate 
             existingRecord.insPhone = insPhone.stringValue
             existingRecord.insFax = insFax.stringValue
         }
-        
-        insName.stringValue = ""
-        insPhone.stringValue = ""
-        insFax.stringValue = ""
+        saveJSONFile(sender)
+        clear(sender)
         
         self.insuranceTableView.reloadData()
     }
@@ -70,7 +68,16 @@ class InsuranceVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate 
         if !id.stringValue.isEmpty {
             insuranceArray.removeAll(where: {$0.id.uuidString == id.stringValue})
             self.insuranceTableView.reloadData()
+            saveJSONFile(sender)
+            clear(sender)
         }
+    }
+    
+    @IBAction func clear(_ sender: Any) {
+        id.stringValue = ""
+        insName.stringValue = ""
+        insPhone.stringValue = ""
+        insFax.stringValue = ""
     }
     
     @IBAction func saveJSONFile(_ sender: Any) {

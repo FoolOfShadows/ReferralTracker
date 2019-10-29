@@ -336,7 +336,7 @@
 				CODE_SIGN_ENTITLEMENTS = ReferralTracker/ReferralTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = ReferralTracker/Info.plist;
@@ -358,7 +358,7 @@
 				CODE_SIGN_ENTITLEMENTS = ReferralTracker/ReferralTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = ReferralTracker/Info.plist;

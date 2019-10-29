@@ -74,14 +74,8 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
             existingRecord.contact = contact.stringValue
         }
         
-        id.stringValue = ""
-        specName.stringValue = ""
-        specAddress.stringValue = ""
-        specPhone.stringValue = ""
-        specFax.stringValue = ""
-        specialty.stringValue = ""
-        npi.stringValue = ""
-        contact.stringValue = ""
+        saveJSONFile(sender)
+        clear(sender)
         
         print("Number of items in array = \(specialistArray.count)")
         self.specialistTableView.reloadData()
@@ -91,6 +85,8 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
         if !id.stringValue.isEmpty {
             specialistArray.removeAll(where: {$0.id.uuidString == id.stringValue})
             self.specialistTableView.reloadData()
+            saveJSONFile(sender)
+            clear(sender)
         }
     }
     
@@ -109,6 +105,16 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
 
+    @IBAction func clear(_ sender: Any) {
+        id.stringValue = ""
+        specName.stringValue = ""
+        specAddress.stringValue = ""
+        specPhone.stringValue = ""
+        specFax.stringValue = ""
+        specialty.stringValue = ""
+        npi.stringValue = ""
+        contact.stringValue = ""
+    }
     
     private func createSpecialistObjectWith(json: Data, completion: @escaping (_ data: Specialist?, _ error: Error?) -> Void) {
         do {

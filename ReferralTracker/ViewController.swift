@@ -267,6 +267,13 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         specialty.stringValue = theSpecialist.specialty
         npi.stringValue = theSpecialist.npi
         contact.stringValue = theSpecialist.contact
+        
+        let fields = [specName, specAddress, specPhone, specFax, specialty, npi, contact]
+        
+        for field in fields {
+            updateVarForField(field!)
+        }
+        document.updateChangeCount(.changeDone)
     }
     
     func addInsurance() {
@@ -274,6 +281,14 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextFieldDelegate,
         paInsurance.stringValue = theInsurance.insName
         paInsPhone.stringValue = theInsurance.insPhone
         paInsFax.stringValue = theInsurance.insFax
+        
+        let fields = [paInsurance, paInsPhone, paInsFax]
+        
+        for field in fields {
+            updateVarForField(field!)
+        }
+        
+        document.updateChangeCount(.changeDone)
     }
     
     @IBAction func printReferral(_ sender: NSButton) {
