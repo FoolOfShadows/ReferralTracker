@@ -18,7 +18,7 @@ class InsuranceVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate 
     @IBOutlet weak var insuranceTableView: NSTableView!
     
     var insuranceArray = [Insurance]()
-    let insuranceFilePath = URL(fileURLWithPath: "\(NSHomeDirectory())/WPCMSharedFiles/WPCM Software Bits/00 CAUTION - Data Files/insurances.json")
+    let insuranceFilePath = URL(fileURLWithPath: "\(NSHomeDirectory())/Sync/WPCMSharedFiles/WPCM Software Bits/00 CAUTION - Data Files/insurances.json")
     
     weak var currentInsuranceDelegate: InsuranceDelegate?
     var chosenInsurance:Insurance?
@@ -119,6 +119,17 @@ class InsuranceVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate 
             return cellView
         }
         return nil
+    }
+    
+    //Allow clicking on the table column headers to sort the column
+    func tableView(_ tableView: NSTableView, sortDescriptorsDidChange oldDescriptors: [NSSortDescriptor]) {
+        print("Sorting table view")
+        let mutableArray = NSMutableArray(array:insuranceArray)
+        print(mutableArray)
+        print(insuranceTableView.sortDescriptors)
+        mutableArray.sort(using: insuranceTableView.sortDescriptors)
+        insuranceArray = (mutableArray as? Array)!
+        tableView.reloadData()
     }
     
     @objc func tableViewDoubleClick(_ sender:AnyObject) {

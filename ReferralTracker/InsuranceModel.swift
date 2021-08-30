@@ -18,7 +18,7 @@ class InsuranceCompanies:Codable {
         insurances = jsonData.insurances
     }
 }
-class Insurance:Codable {
+class Insurance:NSObject, Codable {
     var id:UUID
     var insName:String
     var insPhone:String
@@ -29,5 +29,16 @@ class Insurance:Codable {
         self.insName = insName
         self.insPhone = insPhone
         self.insFax = insFax
+    }
+}
+
+extension Insurance {
+    @objc override func value(forKey key: String) -> Any? {
+        switch key {
+        case "insName":
+            return insName
+        default:
+            return nil
+        }
     }
 }

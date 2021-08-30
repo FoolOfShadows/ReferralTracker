@@ -24,7 +24,7 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
     @IBOutlet weak var specialistTableView: NSTableView!
     
     var specialistArray = [Specialist]()
-    let specialistsFilePath = URL(fileURLWithPath: "\(NSHomeDirectory())/WPCMSharedFiles/WPCM Software Bits/00 CAUTION - Data Files/specialists.json")
+    let specialistsFilePath = URL(fileURLWithPath: "\(NSHomeDirectory())/Sync/WPCMSharedFiles/WPCM Software Bits/00 CAUTION - Data Files/specialists.json")
     
     weak var currentSpecialistDelegate: SpecialistDelegate?
     var chosenSpecialist:Specialist?
@@ -37,6 +37,9 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
         
         specialistTableView.target = self
         specialistTableView.doubleAction = #selector(tableViewDoubleClick(_:))
+        
+//        let sortDescriptor = NSSortDescriptor(key: "self", ascending: true, selector: #selector(NSString.caseInsensitiveCompare(_:)))
+//        specialistTableView.tableColumns[1].sortDescriptorPrototype = sortDescriptor
     }
 
     override func viewDidAppear() {
@@ -91,10 +94,6 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
     }
     
     @IBAction func saveJSONFile(_ sender: Any) {
-        //let pathDirectory = getDocumentsDirectory()
-        //try? FileManager().createDirectory(at: pathDirectory, withIntermediateDirectories: true)
-        //let filePath = pathDirectory.appendingPathComponent("specialists.json")
-        //let specialtsList = [Specialist()]
         let json = try? JSONEncoder().encode(specialistArray)
         
         do {
@@ -154,9 +153,20 @@ class SpecialistVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate
         return nil
     }
     
+    //Allow clicking on the table column headers to sort the column
+    func tableView(_ tableView: NSTableView, sortDescriptorsDidChange oldDescriptors: [NSSortDescriptor]) {
+        print("Sorting table view")
+        let mutableArray = NSMutableArray(array:specialistArray)
+        print(mutableArray)
+        print(specialistTableView.sortDescriptors)
+        mutableArray.sort(using: specialistTableView.sortDescriptors)
+        specialistArray = (mutableArray as? Array)!
+        tableView.reloadData()
+    }
     //Load the selected Specialists data into the form when there selected in the table
     //FIX: need to make sure to update existing item rather than create a new one
     @objc func tableViewDoubleClick(_ sender:AnyObject) {
+       
         let item = specialistArray[specialistTableView.selectedRow]
         
         id.stringValue = item.id.uuidString

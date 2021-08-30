@@ -19,7 +19,10 @@ class Specialists:Codable {
     }
 }
 
-class Specialist:Codable {
+//For column sorting to be implemented the class has to inherit from NSObject
+//to avoid crashing and the extension below must be implemented for the sorting
+//to actually work.
+class Specialist: NSObject, Codable {
     var id:UUID
     var specName:String
     var specAddress:String
@@ -38,5 +41,18 @@ class Specialist:Codable {
         self.specialty = specialty
         self.npi = npi
         self.contact = contact
+    }
+}
+
+extension Specialist {
+    @objc override func value(forKey key: String) -> Any? {
+        switch key {
+        case "specialty":
+            return specialty
+        case "name":
+            return specName
+        default:
+            return nil
+        }
     }
 }
